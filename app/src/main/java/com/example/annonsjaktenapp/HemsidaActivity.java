@@ -23,27 +23,28 @@ public class HemsidaActivity extends AppCompatActivity {
         ImageView categoryImage4 = findViewById(R.id.category_image4);
 
 
+
         categoryImage1.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("category_id", 1);
+            intent.putExtra("selected_category", 1);
             startActivity(intent);
         });
 
         categoryImage2.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("category_id", 2);
+            intent.putExtra("selected_category", 2);
             startActivity(intent);
         });
 
         categoryImage3.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("category_id", 3);
+            intent.putExtra("selected_category", 3);
             startActivity(intent);
         });
 
         categoryImage4.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("category_id", 4);
+            intent.putExtra("selected_category", 4);
             startActivity(intent);
         });
 
