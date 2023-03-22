@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">AnnonsjaktenAPP</string>
     <string name="filter">Filter</string>
+    <string name="categories">Kategorier</string>
+    <string name="recommended_products">Rekommenderade produkter för dig</string>
+    <string name="announcement">Du har räddat 4 träd genom att använda oss!</string>
+    <string name="category_image_description">Category image</string>
+    <string name="product_image_description">Product image</string>
+    <string name="rekommenderade_produkter_f_r_dig">Rekommenderade produkter för dig</string>
+    <string name="du_har_r_ddat_4_tr_d_genom_att_anv_nda_oss">Du har räddat 4 träd genom att använda oss!</string>
+    <string name="kategorier">Kategorier</string>
+
 </resources>

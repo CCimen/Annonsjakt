@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_button"
+        android:icon="@drawable/ic_home"
+        android:title="Hem"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/favorite_button"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorit"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/profile_button"
+        android:icon="@drawable/ic_profile"
+        android:title="Profil"
+        app:showAsAction="ifRoom" />
+</menu>
