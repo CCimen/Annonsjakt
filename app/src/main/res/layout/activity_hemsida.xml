@@ -29,7 +29,7 @@
 
     <!-- Category Title -->
     <TextView
-        android:id="@+id/categories_title"
+        android:id="@+id/kategorier_titel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -46,35 +46,39 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:weightSum="4"
-        app:layout_constraintTop_toBottomOf="@+id/categories_title">
+        app:layout_constraintTop_toBottomOf="@+id/kategorier_titel">
 
         <ImageView
             android:id="@+id/category_image1"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
-            android:src="@drawable/category_image1" />
+            android:src="@drawable/category_image1"
+            android:contentDescription="@string/category_image_description" />
 
         <ImageView
             android:id="@+id/category_image2"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
-            android:src="@drawable/category_image2" />
+            android:src="@drawable/category_image2"
+            android:contentDescription="@string/category_image_description" />
 
         <ImageView
             android:id="@+id/category_image3"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
-            android:src="@drawable/category_image3" />
+            android:src="@drawable/category_image3"
+            android:contentDescription="@string/category_image_description" />
 
         <ImageView
             android:id="@+id/category_image4"
             android:layout_width="0dp"
             android:layout_height="66dp"
             android:layout_weight="1"
-            android:src="@drawable/category_image4" />
+            android:src="@drawable/category_image4"
+            android:contentDescription="@string/category_image_description" />
     </LinearLayout>
 
     <!-- Recommended Products Title -->
@@ -83,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/rekommenderade_produkter_f_r_dig"
+        android:text="@string/rekommenderade_produkter"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categories_layout" />
@@ -103,28 +107,32 @@
             android:layout_width="0dp"
             android:layout_height="103dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image1" />
+            android:src="@drawable/product_image1"
+            android:contentDescription="@string/product_image_description" />
 
         <ImageView
             android:id="@+id/product_image2"
             android:layout_width="0dp"
             android:layout_height="108dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image2" />
+            android:src="@drawable/product_image2"
+            android:contentDescription="@string/product_image_description" />
 
         <ImageView
             android:id="@+id/product_image3"
             android:layout_width="0dp"
             android:layout_height="106dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image3" />
+            android:src="@drawable/product_image3"
+            android:contentDescription="@string/product_image_description" />
 
         <ImageView
             android:id="@+id/product_image4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/product_image4" />
+            android:src="@drawable/product_image4"
+            android:contentDescription="@string/product_image_description" />
     </LinearLayout>
 
     <!-- Announcement -->
@@ -134,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:drawablePadding="8dp"
-        android:text="@string/du_har_r_ddat_4_tr_d_genom_att_anv_nda_oss"
+        android:text="@string/saved_trees"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recommended_products_layout"
