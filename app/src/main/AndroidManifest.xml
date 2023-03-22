@@ -30,13 +30,10 @@
             android:name=".FiltreringSidaActivity"
             android:exported="false" />
         <activity
-            android:name=".HemsidaActivity"
-            android:exported="false" />
-        <activity
             android:name=".StartsidaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HemsidaActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
