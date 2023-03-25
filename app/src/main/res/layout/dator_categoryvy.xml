@@ -96,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:text="Item 2 description"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -139,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:text="Item 3 description"
                             android:textSize="16sp" />
                     </LinearLayout>
 
