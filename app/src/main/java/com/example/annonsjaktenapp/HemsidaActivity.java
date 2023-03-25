@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 
 
-public class HemsidaActivity extends AppCompatActivity {
+public class HemsidaActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class HemsidaActivity extends AppCompatActivity {
         ImageView categoryImage3 = findViewById(R.id.category_image3);
         ImageView categoryImage4 = findViewById(R.id.category_image4);
 
-
+        setUpBottomNavigation();
 
         categoryImage1.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
