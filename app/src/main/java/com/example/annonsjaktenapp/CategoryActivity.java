@@ -11,6 +11,9 @@ import android.widget.ImageButton;
 public class CategoryActivity extends BaseActivity {
     private SharedPreferences sharedPreferences;
 
+    private String[] productIds = {
+            "dator_item1", "dator_item2", "dator_item3", "dator_item4", "dator_item5",
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,17 +76,21 @@ public class CategoryActivity extends BaseActivity {
                 R.id.item5
         };
 
-        for (int itemId : itemIds) {
-            CardView item = findViewById(itemId);
+        for (int i = 0; i < itemIds.length; i++) {
+            final int index = i;
+            CardView item = findViewById(itemIds[index]);
             item.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(CategoryActivity.this, item_detailsActivity.class);
+                    intent.putExtra("category_id", getIntent().getIntExtra("selected_category", 1));
+                    intent.putExtra("item_index", index);
                     startActivity(intent);
                 }
             });
         }
     }
+
 
     private void toggleFavorite(String itemId) {
         boolean currentFavoriteState = sharedPreferences.getBoolean(itemId, false);

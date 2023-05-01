@@ -23,10 +23,22 @@
         <item>Item 4 description</item>
         <item>Item 5 description</item>
     </string-array>
-    <integer-array name="favorite_item_images">
+    <array name="favorite_item_images">
         <item>@drawable/product_image1</item>
         <item>@drawable/product_image2</item>
         <item>@drawable/product_image3</item>
         <item>@drawable/product_image4</item>
-    </integer-array>
+    </array>
+
+    <!-- Product names -->
+    <string name="playstation_name">Playstation 5</string>
+    <string name="macbook_name">MacBook Pro</string>
+    <string name="rakapparat_name">Rakapparat</string>
+    <string name="sko_name">Löparskor</string>
+
+    <!-- Product descriptions -->
+    <string name="playstation_description">Playstation 5 är den senaste spelkonsolen från Sony, med fantastisk grafik och snabba laddningstider.</string>
+    <string name="macbook_description">MacBook Pro är en kraftfull bärbar dator från Apple, perfekt för kreativa yrkespersoner och studenter.</string>
+    <string name="rakapparat_description">Rakapparat med flera blad och flexibelt huvud för en nära och bekväm rakning.</string>
+    <string name="sko_description">Löparskor med god dämpning och stöd, passar för både nybörjare och erfarna löpare.</string>
 </resources>
