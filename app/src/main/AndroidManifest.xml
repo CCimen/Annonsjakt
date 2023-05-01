@@ -24,19 +24,7 @@
             android:name=".InloggningssidaActivity"
             android:exported="false" />
         <activity
-            android:name=".AnnonserActivity"
-            android:exported="false" />
-        <activity
             android:name=".AnnonsvyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BlockVyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ListVyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FiltreringSidaActivity"
             android:exported="false" />
         <activity
             android:name=".StartsidaActivity"

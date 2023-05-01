@@ -46,7 +46,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product_image1" />
+                            android:src="@drawable/datorproduct1" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product_image2" />
+                            android:src="@drawable/datorproduct2" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product_image3" />
+                            android:src="@drawable/datorproduct3" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -176,7 +176,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product_image4" />
+                            android:src="@drawable/datorproduct4" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -219,7 +219,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/product_image1" />
+                            android:src="@drawable/datorproduct5" />
 
                         <TextView
                             android:layout_width="wrap_content"

@@ -107,7 +107,7 @@
             android:layout_width="0dp"
             android:layout_height="103dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image1"
+            android:src="@drawable/datorproduct1"
             android:contentDescription="@string/product_image_description" />
 
         <ImageView
@@ -115,7 +115,7 @@
             android:layout_width="0dp"
             android:layout_height="108dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image2"
+            android:src="@drawable/datorproduct2"
             android:contentDescription="@string/product_image_description" />
 
         <ImageView
@@ -123,7 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="106dp"
             android:layout_weight="1"
-            android:src="@drawable/product_image3"
+            android:src="@drawable/skonhetproduct5"
             android:contentDescription="@string/product_image_description" />
 
         <ImageView

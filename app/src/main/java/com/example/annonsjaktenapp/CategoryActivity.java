@@ -116,6 +116,5 @@ public class CategoryActivity extends BaseActivity {
         updateFavoriteButton(R.id.favorite_button3, "item3");
         updateFavoriteButton(R.id.favorite_button4, "item4");
         updateFavoriteButton(R.id.favorite_button5, "item5");
-        // Repeat for other favorite buttons if needed
     }
 }

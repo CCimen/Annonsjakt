@@ -24,9 +24,9 @@
         <item>Item 5 description</item>
     </string-array>
     <array name="favorite_item_images">
-        <item>@drawable/product_image1</item>
-        <item>@drawable/product_image2</item>
-        <item>@drawable/product_image3</item>
+        <item>@drawable/datorproduct1</item>
+        <item>@drawable/datorproduct2</item>
+        <item>@drawable/skonhetproduct5</item>
         <item>@drawable/product_image4</item>
     </array>
 

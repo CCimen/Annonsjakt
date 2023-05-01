@@ -1,7 +1,5 @@
 package com.example.annonsjaktenapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -55,19 +53,19 @@ public class HemsidaActivity extends BaseActivity {
 
         productImage1.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, AnnonsvyActivity.class);
-            intent.putExtra("product_image_resource", R.drawable.product_image1);
+            intent.putExtra("product_image_resource", R.drawable.datorproduct1);
             startActivity(intent);
         });
 
         productImage2.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, AnnonsvyActivity.class);
-            intent.putExtra("product_image_resource", R.drawable.product_image2);
+            intent.putExtra("product_image_resource", R.drawable.datorproduct2);
             startActivity(intent);
         });
 
         productImage3.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, AnnonsvyActivity.class);
-            intent.putExtra("product_image_resource", R.drawable.product_image3);
+            intent.putExtra("product_image_resource", R.drawable.skonhetproduct5);
             startActivity(intent);
         });
 
