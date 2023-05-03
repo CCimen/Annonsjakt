@@ -131,7 +131,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/product_image4"
+            android:src="@drawable/kladerproduct4"
             android:contentDescription="@string/product_image_description" />
     </LinearLayout>
 
