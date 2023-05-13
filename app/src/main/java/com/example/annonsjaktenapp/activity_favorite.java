@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ public class activity_favorite extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_favorite);
         sharedPreferences = getSharedPreferences("favorites", MODE_PRIVATE);
         favoritedItems = getFavoritedItems();
@@ -51,5 +53,16 @@ public class activity_favorite extends BaseActivity {
         }
         itemImages.recycle();
         return new ArrayList<>(itemMap.values());
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

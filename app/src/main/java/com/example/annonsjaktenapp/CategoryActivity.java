@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -18,6 +19,7 @@ public class CategoryActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         int selectedCategory = getIntent().getIntExtra("selected_category", 1);
         switch (selectedCategory) {
             case 2:
@@ -83,8 +85,9 @@ public class CategoryActivity extends BaseActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(CategoryActivity.this, item_detailsActivity.class);
-                    intent.putExtra("category_id", getIntent().getIntExtra("selected_category", 1));
-                    intent.putExtra("item_index", index);
+                    int categoryId = getIntent().getIntExtra("selected_category", 1);
+                    Product product = ProductDatabase.getProduct(categoryId, index);
+                    intent.putExtra("product", product);
                     startActivity(intent);
                 }
             });
@@ -116,5 +119,16 @@ public class CategoryActivity extends BaseActivity {
         updateFavoriteButton(R.id.favorite_button3, "item3");
         updateFavoriteButton(R.id.favorite_button4, "item4");
         updateFavoriteButton(R.id.favorite_button5, "item5");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

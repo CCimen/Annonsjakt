@@ -2,10 +2,17 @@ package com.example.annonsjaktenapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HemsidaActivity extends BaseActivity {
-    private String[] recommendedProductIds = {"playstation", "macbook", "rakapparat", "sko"};
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +31,20 @@ public class HemsidaActivity extends BaseActivity {
         ImageView productImage3 = findViewById(R.id.product_image3);
         ImageView productImage4 = findViewById(R.id.product_image4);
 
-        productImage1.setOnClickListener(v -> showProductDetails(1, 0));
-        productImage2.setOnClickListener(v -> showProductDetails(1, 1));
-        productImage3.setOnClickListener(v -> showProductDetails(2, 4));
-        productImage4.setOnClickListener(v -> showProductDetails(4, 3));
+        // Initialize searchView and filterButton
+        searchView = findViewById(R.id.search_view);
+        Button filterButton = findViewById(R.id.filter_button);
+
+        List<Product> recommendedProducts = new ArrayList<>();
+        recommendedProducts.add(ProductDatabase.getProduct(1, 0)); // Sony Playstation 5 Console
+        recommendedProducts.add(ProductDatabase.getProduct(1, 1)); // Apple 2022 MacBook Air Laptop with M2 chip
+        recommendedProducts.add(ProductDatabase.getProduct(2, 0)); // Philips Rakapparat
+        recommendedProducts.add(ProductDatabase.getProduct(4, 3)); // Adidas Skor
+
+        productImage1.setOnClickListener(v -> showProductDetails(recommendedProducts.get(0)));
+        productImage2.setOnClickListener(v -> showProductDetails(recommendedProducts.get(1)));
+        productImage3.setOnClickListener(v -> showProductDetails(recommendedProducts.get(2)));
+        productImage4.setOnClickListener(v -> showProductDetails(recommendedProducts.get(3)));
 
         setUpBottomNavigation();
 
@@ -54,12 +71,43 @@ public class HemsidaActivity extends BaseActivity {
             intent.putExtra("selected_category", 4);
             startActivity(intent);
         });
+
+        setUpSearchView();
+
+        // Set up the filter button click listener
+        filterButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HemsidaActivity.this, FilterActivity.class);
+            startActivityForResult(intent, 1);
+        });
     }
 
-    private void showProductDetails(int categoryId, int itemIndex) {
-        Intent intent = new Intent(this, item_detailsActivity.class);
-        intent.putExtra("category_id", categoryId);
-        intent.putExtra("item_index", itemIndex);
+    private void showProductDetails(Product product) {
+        Intent intent = new Intent(this, SearchResultsActivity.class);
+        intent.putExtra("search_query", product.getTitle());
         startActivity(intent);
     }
+
+
+    private void setUpSearchView() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                performSearch(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+    }
+
+    private void performSearch(String query) {
+        Intent intent = new Intent(HemsidaActivity.this, SearchResultsActivity.class);
+        intent.putExtra("search_query", query);
+        startActivity(intent);
+    }
+
 }
+
