@@ -20,39 +20,52 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardElevation="4dp"
                 app:cardCornerRadius="16dp">
 
-                <ImageView
-                    android:id="@+id/item_image"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:scaleType="fitCenter" />
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/item_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- Additional TextViews for dynamic content will be added here -->
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp">
-
-                <TextView
-                    android:id="@+id/item_description"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:textSize="16sp" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/item_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:id="@+id/item_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="Produkt Titel" />
+
+                    <TextView
+                        android:id="@+id/item_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        android:text="Produkt Beskrivning" />
+
+                    <TextView
+                        android:id="@+id/item_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        android:text="Pris: 3500 KR" />
+
+                    <TextView
+                        android:id="@+id/item_seller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        android:text="Säljs på: Blocket" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <Button
@@ -60,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:text="Go to seller" />
+                android:text="Go to Seller" />
+
         </LinearLayout>
     </ScrollView>
 

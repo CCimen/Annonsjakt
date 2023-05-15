@@ -44,15 +44,15 @@
                         android:padding="15dp">
 
                         <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/mobilproduct1" />
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/mobilproduct11" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:text="OPPO Find X3 PRO"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -96,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 2 description"
+                            android:text="Samsung Galaxy S23 Ultra SM-S918B"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -139,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 3 description"
+                            android:text="OnePlus 11 5G | 16GB RAM+256GB"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -182,7 +182,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 4 description"
+                            android:text="Google Pixel 7 Pro - 5G"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -225,7 +225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 5 description"
+                            android:text="Nothing Phone 1 Smartphone Unlocked"
                             android:textSize="16sp" />
                     </LinearLayout>
 

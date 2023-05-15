@@ -52,7 +52,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:text="Dolce And Gabbana The One Men EDP"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -96,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 2 description"
+                            android:text="Dior Homme Intense EDP"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -139,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 3 description"
+                            android:text="Philips OneBlade QP2520/30"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -182,7 +182,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 4 description"
+                            android:text="The Ordinary Glycolic Acid solution"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -225,7 +225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 5 description"
+                            android:text="La roche Posay Sunscreen"
                             android:textSize="16sp" />
                     </LinearLayout>
 

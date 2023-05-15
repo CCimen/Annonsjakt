@@ -49,22 +49,22 @@
                             android:src="@drawable/kladerproduct1" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:layout_weight="1"
+                            android:text="Columbia Men's Glennaker Lake Rain Jacket"
                             android:textSize="16sp" />
-                    </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/favorite_button1"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@android:color/transparent"
-                        android:src="@android:drawable/btn_star" />
+                        <ImageButton
+                            android:id="@+id/favorite_button1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:background="@android:color/transparent"
+                            android:src="@android:drawable/btn_star" />
+                    </LinearLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
@@ -93,22 +93,22 @@
                             android:src="@drawable/kladerproduct2" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 2 description"
+                            android:layout_weight="1"
+                            android:text="MakeMeChic Women's Summer Boho Dress Floral Print"
                             android:textSize="16sp" />
-                    </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/favorite_button2"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@android:color/transparent"
-                        android:src="@android:drawable/btn_star" />
+                        <ImageButton
+                            android:id="@+id/favorite_button2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="16dp"
+                            android:background="@android:color/transparent"
+                            android:src="@android:drawable/btn_star" />
+                    </LinearLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
@@ -130,28 +130,28 @@
                         android:orientation="horizontal"
                         android:padding="15dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/kladerproduct3" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/kladerproduct3" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Item 3 description"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:text="Nike Men's Giannis Immortality White/Metallic Gold-Black"
+                        android:textSize="16sp" />
 
                     <ImageButton
                         android:id="@+id/favorite_button3"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/btn_star" />
+                    </LinearLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
@@ -173,28 +173,28 @@
                         android:orientation="horizontal"
                         android:padding="15dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/kladerproduct4" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/kladerproduct4" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Item 4 description"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:text="Nike Training Running Shoe, EU"
+                        android:textSize="16sp" />
 
                     <ImageButton
                         android:id="@+id/favorite_button4"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/btn_star" />
+                    </LinearLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
@@ -216,28 +216,28 @@
                         android:orientation="horizontal"
                         android:padding="15dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/kladerproduct5" />
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/kladerproduct5" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:text="Item 5 description"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:text="THE NORTH FACE Half Dome T-Shirt"
+                        android:textSize="16sp" />
 
                     <ImageButton
                         android:id="@+id/favorite_button5"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
                         android:background="@android:color/transparent"
                         android:src="@android:drawable/btn_star" />
+                    </LinearLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

@@ -52,7 +52,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 1 description"
+                            android:text="Sony Playstation 5"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -96,7 +96,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 2 description"
+                            android:text="Apple Macbook Air 13 2020 512GB SSD"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -139,7 +139,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 3 description"
+                            android:text="Apple Magic Mouse 2 - Silver"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -182,7 +182,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 4 description"
+                            android:text="Apple Airpods Pro 2 2022"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -225,7 +225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:text="Item 5 description"
+                            android:text="Apple Studio Display 2020"
                             android:textSize="16sp" />
                     </LinearLayout>
 

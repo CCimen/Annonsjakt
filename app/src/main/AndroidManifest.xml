@@ -30,9 +30,6 @@
             android:name=".InloggningssidaActivity"
             android:exported="false" />
         <activity
-            android:name=".AnnonsvyActivity"
-            android:exported="false" />
-        <activity
             android:name=".StartsidaActivity"
             android:exported="false" />
         <activity
