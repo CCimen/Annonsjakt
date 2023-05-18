@@ -3,9 +3,13 @@ package com.example.annonsjaktenapp;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * En Java klass för lagring och hämtning av produkter.
+ */
 public class ProductDatabase {
     private static final List<Product> PRODUCTS = new ArrayList<>();
 
+    // Här läggs produkterna till i databasen
     static {
         //Dator produkter
         PRODUCTS.add(new Product("Sony Playstation 5 Console", "DualSense Wireless Controller integration: Feel your journey through the Norse realms, made possible by immersive haptic feedback and adaptive trigger functionality.", R.drawable.datorproduct1, 1, 0));
@@ -39,11 +43,15 @@ public class ProductDatabase {
         //Rekommenderad för dig produkter
         PRODUCTS.add(new Product("Adidas Shoe", "Adidas shoes are designed to deliver maximum comfort, performance and style.", R.drawable.kladerproduct4, 4, 3));
 
-
-
-
     }
 
+    /**
+     * Hämtar en produkt baserat på kategori-ID och objektindex.
+     *
+     * @param categoryId Kategori-ID för produkten.
+     * @param itemIndex  Index för produkten inom kategorin.
+     * @return Produkten som matchar kategori-ID och objektindex, eller null om ingen matchning hittades.
+     */
     public static Product getProduct(int categoryId, int itemIndex) {
         for (Product product : PRODUCTS) {
             if (product.getCategoryId() == categoryId && product.getItemIndex() == itemIndex) {
@@ -53,6 +61,12 @@ public class ProductDatabase {
         return null;
     }
 
+    /**
+     * Hämtar en lista över produkter som matchar en sökfråga.
+     *
+     * @param query Sökfrågan som används för att filtrera produkterna.
+     * @return En lista över produkter som matchar sökfrågan.
+     */
     public static List<Product> getProducts(String query) {
         List<Product> products = new ArrayList<>();
         for (Product product : PRODUCTS) {

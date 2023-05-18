@@ -9,6 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+/**
+ * En aktivitetsklass som visar produkter inom en specifik kategori.
+ */
 public class CategoryActivity extends BaseActivity {
     private SharedPreferences sharedPreferences;
 
@@ -23,29 +26,32 @@ public class CategoryActivity extends BaseActivity {
         int selectedCategory = getIntent().getIntExtra("selected_category", 1);
         switch (selectedCategory) {
             case 2:
-                setContentView(R.layout.skonhet_categoryvy);
+                setContentView(R.layout.skonhet_categoryvy); // Visar layouten för skönhetskategorin
                 break;
             case 3:
-                setContentView(R.layout.mobil_categoryvy);
+                setContentView(R.layout.mobil_categoryvy); // Visar layouten för mobilkategorin
                 break;
             case 4:
-                setContentView(R.layout.klader_categoryvy);
+                setContentView(R.layout.klader_categoryvy); // Visar layouten för klädkategorin
                 break;
             case 1:
             default:
-                setContentView(R.layout.dator_categoryvy);
+                setContentView(R.layout.dator_categoryvy); // Visar layouten för datorkategorin
                 break;
         }
 
-        setUpBottomNavigation();
+        setUpBottomNavigation(); // Ställer in navigeringsmenyn i botten av skärmen
 
         sharedPreferences = getSharedPreferences("favorites", MODE_PRIVATE);
 
-        setupFavoriteButtonListeners();
-        setupItemClickListeners();
-        updateFavoriteButtons();
+        setupFavoriteButtonListeners(); // Ställer in lyssnare för favoritknappar
+        setupItemClickListeners(); // Ställer in lyssnare för produktobjekten
+        updateFavoriteButtons(); // Uppdaterar favoritknapparnas tillstånd
     }
 
+    /**
+     * Ställer in lyssnare för favoritknapparna.
+     */
     private void setupFavoriteButtonListeners() {
         int[] favoriteButtonIds = new int[]{
                 R.id.favorite_button1,
@@ -63,12 +69,15 @@ public class CategoryActivity extends BaseActivity {
             favoriteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    toggleFavorite(itemId);
+                    toggleFavorite(itemId); // Växlar favoritstatus för objektet
                 }
             });
         }
     }
 
+    /**
+     * Ställer in lyssnare för produktobjekten.
+     */
     private void setupItemClickListeners() {
         int[] itemIds = new int[]{
                 R.id.item1,
@@ -95,6 +104,11 @@ public class CategoryActivity extends BaseActivity {
     }
 
 
+    /**
+     * Växlar favoritstatus för ett objekt baserat på dess ID.
+     *
+     * @param itemId ID för objektet.
+     */
     private void toggleFavorite(String itemId) {
         boolean currentFavoriteState = sharedPreferences.getBoolean(itemId, false);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -103,6 +117,12 @@ public class CategoryActivity extends BaseActivity {
         updateFavoriteButtons();
     }
 
+    /**
+     * Uppdaterar favoritknappen för ett specifikt objekt baserat på preferensnyckeln.
+     *
+     * @param buttonId       ID för favoritknappen.
+     * @param preferenceKey  Nyckel för SharedPreferences-preferensen för objektet.
+     */
     private void updateFavoriteButton(int buttonId, String preferenceKey) {
         ImageButton favoriteButton = findViewById(buttonId);
         boolean isItemFavorite = sharedPreferences.getBoolean(preferenceKey, false);
@@ -113,6 +133,9 @@ public class CategoryActivity extends BaseActivity {
         }
     }
 
+    /**
+     * Uppdaterar favoritknapparna för alla objekt.
+     */
     private void updateFavoriteButtons() {
         updateFavoriteButton(R.id.favorite_button1, "item1");
         updateFavoriteButton(R.id.favorite_button2, "item2");
@@ -125,7 +148,7 @@ public class CategoryActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                onBackPressed(); // Går tillbaka till föregående aktivitet när hemknappen klickas
                 return true;
         }
 

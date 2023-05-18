@@ -14,10 +14,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * En aktivitetsklass som visar en lista över favoritobjekt.
+ */
 public class activity_favorite extends BaseActivity {
 
-    private List<FavoriteItem> favoritedItems;
-    private SharedPreferences sharedPreferences;
+    private List<FavoriteItem> favoritedItems; // En lista som innehåller favoritobjekt
+    private SharedPreferences sharedPreferences; // SharedPreferences-objekt för att lagra favoriter
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +28,20 @@ public class activity_favorite extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_favorite);
         sharedPreferences = getSharedPreferences("favorites", MODE_PRIVATE);
-        favoritedItems = getFavoritedItems();
+        favoritedItems = getFavoritedItems(); // Hämtar favoritobjekt från SharedPreferences
 
         RecyclerView itemContainer = findViewById(R.id.favorite_item_container);
         itemContainer.setLayoutManager(new LinearLayoutManager(this));
-        itemContainer.setAdapter(new FavoriteItemAdapter(favoritedItems));
+        itemContainer.setAdapter(new FavoriteItemAdapter(favoritedItems)); // Skapar och sätter adaptern för RecyclerView
 
-        setUpBottomNavigation();
+        setUpBottomNavigation(); // Ställer in navigeringsmenyn i botten av skärmen
     }
 
+    /**
+     * Hämtar en lista över favoritobjekt från SharedPreferences.
+     *
+     * @return En lista över favoritobjekt.
+     */
     private List<FavoriteItem> getFavoritedItems() {
         Map<String, FavoriteItem> itemMap = new HashMap<>();
         String[] itemTitles = getResources().getStringArray(R.array.favorite_items);
@@ -55,11 +63,17 @@ public class activity_favorite extends BaseActivity {
         return new ArrayList<>(itemMap.values());
     }
 
+    /**
+     * Hanterar menyobjektets klickhändelser.
+     *
+     * @param item Det klickade menyobjektet.
+     * @return `true` om händelsen hanterades, annars `false`.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                onBackPressed(); // Går tillbaka till föregående aktivitet när hemknappen klickas
                 return true;
         }
 

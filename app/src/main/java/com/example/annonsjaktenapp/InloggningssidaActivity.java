@@ -9,19 +9,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * En aktivitetsklass som hanterar inloggningssidan.
+ */
 public class InloggningssidaActivity extends AppCompatActivity {
 
-    private EditText anvandarnamn;
-    private EditText losenord;
-    private TextView loginStatus;
-    private Button loginButton;
+    private EditText anvandarnamn; // Textfält för användarnamn
+    private EditText losenord; // Textfält för lösenord
+    private TextView loginStatus; // Textvy för inloggningsstatus
+    private Button loginButton; // Knapp för att logga in
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inloggningssida);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // enable the back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Aktivera tillbaka-knappen
 
         anvandarnamn = (EditText) findViewById(R.id.anvandarnamn);
         losenord = (EditText) findViewById(R.id.losenord);
@@ -44,16 +47,19 @@ public class InloggningssidaActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Hanterar inloggningsfunktionen när login-knappen klickas.
+     */
     private void handleLogin() {
         String username = anvandarnamn.getText().toString();
         String password = losenord.getText().toString();
 
-        // Here you should handle your login logic. For example, check the username and password.
-        // If the login is successful:
-
         loginStatus.setText("Du har loggats in! Välkommen " + username);
     }
 
+    /**
+     * Öppnar startsidan (HemsidaActivity).
+     */
     public void goToHemSida() {
         Intent intent = new Intent(this, HemsidaActivity.class);
         startActivity(intent);

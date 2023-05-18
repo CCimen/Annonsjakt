@@ -14,13 +14,17 @@ import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchResultsActivity extends AppCompatActivity {
+/**
+ * En aktivitet som visar sökresultat baserat på en sökfråga.
+ */
+public class SearchResultsActivity extends BaseActivity {
 
-    private EditText searchBar;
-    private RecyclerView searchResultsRecyclerView;
-    private ProductAdapter productAdapter;
-    private List<Product> productList;
+    private EditText searchBar; // Sökfältet för att mata in sökfrågan
+    private RecyclerView searchResultsRecyclerView; // RecyclerView för att visa sökresultaten
+    private ProductAdapter productAdapter; // Adapter för att binda sökresultaten till RecyclerView
+    private List<Product> productList; // Lista över sökresultat
 
+    /* Implementera detta i framtiden*/
     private boolean blocketFilter;
     private boolean traderaFilter;
     private boolean ebayFilter;
@@ -30,28 +34,28 @@ public class SearchResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-        // Set up the back button
+        // Sätt upp tillbaka knappen
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         searchBar = findViewById(R.id.search_bar);
         searchResultsRecyclerView = findViewById(R.id.search_results_recycler_view);
 
-        // Initialize the product list
+        // Initializera produkt listan
         productList = new ArrayList<>();
-
-        // Set up the RecyclerView
+        setUpBottomNavigation();
+        // Sätt upp RecyclerView
         productAdapter = new ProductAdapter(this, productList);
         searchResultsRecyclerView.setAdapter(productAdapter);
         searchResultsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Retrieve the search query from the Intent
+        // Hämta sökfrågan från Intent
         Intent intent = getIntent();
         String searchQuery = intent.getStringExtra("search_query");
 
-        // Set the search bar's text to the query and search the products
+        // Ange sökfältets text till sökfrågan och sök i produkternas titlar
         searchBar.setText(searchQuery);
         searchProducts(searchQuery);
 
-        // Set up the search bar
+        // Sätt upp sökfältet för att söka produkter
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -81,6 +85,11 @@ public class SearchResultsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Söker produkter baserat på en sökfråga.
+     *
+     * @param query Sökfrågan som används för att filtrera produkterna.
+     */
     private void searchProducts(String query) {
         // Clear the product list and add matching products
         productList.clear();

@@ -19,6 +19,6 @@ public class StartsidaActivity extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        }, 1000); // delay of 1 second (1000 milliseconds)
+        }, 1000); // låt den ta 1 sekund så att man hinner se loggan
     }
 }

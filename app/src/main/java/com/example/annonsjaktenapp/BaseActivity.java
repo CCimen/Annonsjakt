@@ -6,8 +6,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.content.Intent;
 import android.view.MenuItem;
 
+/**
+ * En abstrakt basaktivitetsklass som innehåller gemensam funktionalitet för aktiviteter.
+ */
 public abstract class BaseActivity extends AppCompatActivity {
 
+    /**
+     * Ställer in navigeringsmenyn i botten av skärmen.
+     */
     protected void setUpBottomNavigation() {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
 
@@ -27,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                         Intent profileIntent = new Intent(BaseActivity.this, InloggningssidaActivity.class);
                         startActivity(profileIntent);
                         break;
-                    // Handle other navigation items here
+                    // Hantera andra navigeringsobjekt här
                 }
                 return true;
             }

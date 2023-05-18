@@ -10,28 +10,30 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * En aktivitetsklass som visar startsidan med kategorier, rekommenderade produkter och sökfunktion.
+ */
 public class HemsidaActivity extends BaseActivity {
-    private SearchView searchView;
+    private SearchView searchView; // Sökvy för att söka efter produkter
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hemsida);
 
-        // Variables for linking the images to the category view
+        // Variabler för att länka bilderna till kategorivisning
         ImageView categoryImage1 = findViewById(R.id.category_image1);
         ImageView categoryImage2 = findViewById(R.id.category_image2);
         ImageView categoryImage3 = findViewById(R.id.category_image3);
         ImageView categoryImage4 = findViewById(R.id.category_image4);
 
-        // Variables for linking the images to recommended products
+        // Variabler för att länka bilderna till rekommenderade produkter
         ImageView productImage1 = findViewById(R.id.product_image1);
         ImageView productImage2 = findViewById(R.id.product_image2);
         ImageView productImage3 = findViewById(R.id.product_image3);
         ImageView productImage4 = findViewById(R.id.product_image4);
 
-        // Initialize searchView and filterButton
+        // Initiera searchView och filterButton
         searchView = findViewById(R.id.search_view);
         Button filterButton = findViewById(R.id.filter_button);
 
@@ -74,13 +76,18 @@ public class HemsidaActivity extends BaseActivity {
 
         setUpSearchView();
 
-        // Set up the filter button click listener
+        // Ställ in klicklyssnare för filterknappen
         filterButton.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, FilterActivity.class);
             startActivityForResult(intent, 1);
         });
     }
 
+    /**
+     * Visar detaljer för en produkt.
+     *
+     * @param product Produkten vars detaljer ska visas.
+     */
     private void showProductDetails(Product product) {
         Intent intent = new Intent(this, SearchResultsActivity.class);
         intent.putExtra("search_query", product.getTitle());
@@ -88,6 +95,9 @@ public class HemsidaActivity extends BaseActivity {
     }
 
 
+    /**
+     * Ställer in sökvyn och lyssnaren för sökning.
+     */
     private void setUpSearchView() {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -103,6 +113,11 @@ public class HemsidaActivity extends BaseActivity {
         });
     }
 
+    /**
+     * Utför sökning med den angivna sökfrågan.
+     *
+     * @param query Sökfrågan att utföra sökning med.
+     */
     private void performSearch(String query) {
         Intent intent = new Intent(HemsidaActivity.this, SearchResultsActivity.class);
         intent.putExtra("search_query", query);

@@ -12,12 +12,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-
+/**
+ * En adapterklass för att hantera visning av produkter i en RecyclerView.
+ */
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
 
-    public final List<Product> productList;
-    private final LayoutInflater inflater;
+    public final List<Product> productList; // Lista över produkter
+    private final LayoutInflater inflater; // Layoutinflator för att skapa visningar
 
+    /**
+     * Skapar en ny instans av ProductAdapter.
+     *
+     * @param context      Kontexten för aktiviteten eller fragmentet.
+     * @param productList Listan över produkter att visas.
+     */
     public ProductAdapter(Context context, List<Product> productList) {
         this.productList = productList;
         this.inflater = LayoutInflater.from(context);
@@ -52,10 +60,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         return productList.size();
     }
 
+
+    /**
+     * En viewholder för att hålla referenser till visningskomponenter i varje produktobjekt.
+     */
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
-        final TextView title;
-        final TextView description;
-        final ImageView image;
+        final TextView title; // Textvy för produkttitel
+        final TextView description; // Textvy för produktbeskrivning
+        final ImageView image; // Bildvy för produktbild
 
         public ProductViewHolder(View itemView) {
             super(itemView);

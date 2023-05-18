@@ -8,21 +8,25 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class item_detailsActivity extends AppCompatActivity {
+/**
+ * En aktivitetsklass som visar detaljer för en produkt.
+ */
+public class item_detailsActivity extends BaseActivity {
 
-    private TextView title;
-    private TextView description;
-    private ImageView image;
+    private TextView title; // Textvy för produkttitel
+    private TextView description; // Textvy för produktbeskrivning
+    private ImageView image; // Bildvy för produktbild
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_details);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Visa tillbaka-knappen i verktygsfältet
 
         title = findViewById(R.id.item_title);
         description = findViewById(R.id.item_description);
         image = findViewById(R.id.item_image);
+        setUpBottomNavigation();
 
         Intent intent = getIntent();
         Product product = (Product) intent.getSerializableExtra("product");
@@ -34,10 +38,16 @@ public class item_detailsActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Hanterar klickhändelsen för menyalternativet.
+     *
+     * @param item Det valda menyalternativet.
+     * @return true om händelsen hanterades, annars false.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case android.R.id.home: // Hantera klick på tillbaka-knappen
                 onBackPressed();
                 return true;
         }
