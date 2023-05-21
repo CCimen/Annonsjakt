@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -91,9 +92,31 @@ public class SearchResultsActivity extends BaseActivity {
      * @param query Sökfrågan som används för att filtrera produkterna.
      */
     private void searchProducts(String query) {
-        // Clear the product list and add matching products
+        List<Product> matchedProducts = new ArrayList<>();
+
+        ProductDataFetchUtil dataFetchUtil = new ProductDataFetchUtil();
+
+        // Fetch products from all categories
+        for (int categoryId = 0; ; categoryId++) {
+            try {
+                List<Product> categoryProducts = dataFetchUtil.fetchProductData(this, categoryId);
+                for (Product product : categoryProducts) {
+                    if (product.getTitle().toLowerCase().contains(query.toLowerCase())) {
+                        matchedProducts.add(product);
+                    }
+                }
+            } catch (Resources.NotFoundException e) {
+                // Category not found, exit the loop
+                break;
+            }
+        }
+
+        // Update the product list with the matching products
         productList.clear();
-        productList.addAll(ProductDatabase.getProducts(query));
+        productList.addAll(matchedProducts);
         productAdapter.notifyDataSetChanged();
     }
+
+
+
 }

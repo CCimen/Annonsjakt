@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Product images -->
+    <array name="product_images">
+        <!-- ... existing items ... -->
+        <!-- Dator products -->
+        <item>@drawable/datorproduct1</item>
+        <item>@drawable/datorproduct2</item>
+        <item>@drawable/datorproduct3</item>
+        <item>@drawable/datorproduct4</item>
+        <item>@drawable/datorproduct5</item>
+        <!-- Skönhet products -->
+        <item>@drawable/skonhetproduct5</item>
+        <item>@drawable/skonhetproduct2</item>
+        <item>@drawable/skonhetproduct3</item>
+        <item>@drawable/skonhetproduct4</item>
+        <item>@drawable/skonhetproduct1</item>
+        <!-- Mobil products -->
+        <item>@drawable/mobilproduct11</item>
+        <item>@drawable/mobilproduct2</item>
+        <item>@drawable/mobilproduct3</item>
+        <item>@drawable/mobilproduct4</item>
+        <item>@drawable/mobilproduct5</item>
+        <!-- Kläder products -->
+        <item>@drawable/kladerproduct1</item>
+        <item>@drawable/kladerproduct2</item>
+        <item>@drawable/kladerproduct3</item>
+        <item>@drawable/kladerproduct4</item>
+        <item>@drawable/kladerproduct5</item>
+    </array>
+    <!-- The rest of your arrays -->
+</resources>

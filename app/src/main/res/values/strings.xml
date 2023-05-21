@@ -9,6 +9,155 @@
     <string name="rekommenderade_produkter">Rekommenderade produkter för dig</string>
     <string name="saved_trees">Du har räddat 4 träd genom att använda oss!</string>
     <string name="kategorier">Kategorier</string>
+
+    <string-array name="category_0_titles">
+        <!-- Dator products -->
+        <item>Sony Playstation 5 Console</item>
+        <item>Apple 2022 MacBook Air Laptop with M2 chip: 13.6-inch Liquid Retina Display, 8GB RAM, 256GB SSD Storage</item>
+        <item>Apple Magic Mouse: Wireless, Bluetooth, Rechargeable. Works with Mac or iPad</item>
+        <item>Apple AirPods Pro (2nd Generation) Wireless Earbuds</item>
+        <item>Apple Studio Display - Standard Glass - Tilt-Adjustable Stand</item>
+    </string-array>
+    <integer-array name="category_0_images">
+        <item>@drawable/datorproduct1</item>
+        <item>@drawable/datorproduct2</item>
+        <item>@drawable/datorproduct3</item>
+        <item>@drawable/datorproduct4</item>
+        <item>@drawable/datorproduct5</item>
+    </integer-array>
+    <string-array name="category_0_prices">
+        <item>2500 KR</item>
+        <item>5000 KR</item>
+        <item>3500 KR</item>
+        <item>6000 KR</item>
+        <item>4000 KR</item>
+    </string-array>
+    <string-array name="category_0_sellers">
+        <item>Blocket</item>
+        <item>Sellpy</item>
+        <item>Tradera</item>
+        <item>Blocket</item>
+        <item>Sellpy</item>
+    </string-array>
+    <string-array name="category_0_descriptions">
+        <item>DualSense Wireless Controller integration: Feel your journey through the Norse realms, made possible by immersive haptic feedback and adaptive trigger functionality.</item>
+        <item>The redesigned MacBook Air is more portable than ever and weighs just 2.7 pounds.</item>
+        <item>Magic Mouse is wireless and rechargeable, with an optimized foot design that lets it glide smoothly across your desk.</item>
+        <item>Personalized Spatial Audio surrounds you in sound tuned just for you. It works with dynamic head tracking to immerse you deeper in music and movies.</item>
+        <item>An immersive 27-inch 5K Retina display with a 12MP camera with Center Stage, studio-quality mics, and six-speaker sound system.</item>
+    </string-array>
+
+    <string-array name="category_1_titles">
+        <!-- Skönhet products -->
+        <item>Philips Rakapparat</item>
+        <item>Dior Homme Intense 100ml</item>
+        <item>The Ordinary - Glycolic Acid 7% Toning Solution</item>
+        <item>La Roche-Posay Anthelios Uvmune Ultra Light Creme SPF 50+</item>
+        <item>Dolce Gabbana The One for Men Eau de Parfum Spray</item>
+    </string-array>
+    <integer-array name="category_1_images">
+        <item>@drawable/skonhetproduct5</item>
+        <item>@drawable/skonhetproduct2</item>
+        <item>@drawable/skonhetproduct3</item>
+        <item>@drawable/skonhetproduct4</item>
+        <item>@drawable/skonhetproduct1</item>
+    </integer-array>
+    <string-array name="category_1_prices">
+        <item>1000 KR</item>
+        <item>2000 KR</item>
+        <item>3000 KR</item>
+        <item>4500 KR</item>
+        <item>2500 KR</item>
+    </string-array>
+    <string-array name="category_1_sellers">
+        <item>Tradera</item>
+        <item>Blocket</item>
+        <item>Sellpy</item>
+        <item>Blocket</item>
+        <item>Tradera</item>
+    </string-array>
+    <string-array name="category_1_descriptions">
+        <item>Philips shaver series 9000 cuts up to 20% more hair in a single stroke.</item>
+        <item>Dior Homme Intense 2011 by Dior is a Woody Floral Musk fragrance for men. Dior Homme Intense 2011 was launched in 2011.</item>
+        <item>Glycolic Acid 7% Toning Solution is an exfoliant targeted at the surface of the skin. It helps improve skin clarity, balance uneven skin tone, and correct texture over time.</item>
+        <item>La Roche-Posay Anthelios UVmune Ultra Light Cream SPF50+ är en ansiktssolkräm för alla hudtyper. Formulan innehåller thermalskt vatten från La-Roche Posay.</item>
+        <item>The One for Men Eau de Parfum is part of the iconic world of The One, offering a deeper fragrance experience for the perfume connoisseur. Masculine and magnetic, this highly intense scent.</item>
+    </string-array>
+
+    <string-array name="category_2_titles">
+        <!-- Mobil products -->
+        <item>OPPO Find X3 PRO</item>
+        <item>Samsung Galaxy S23 Ultra SM-S918B 5G Dual SIM 8GB RAM</item>
+        <item>OnePlus 11 5G | 16GB RAM+256GB | Dual-SIM | Titan Black</item>
+        <item>Google Pixel 7 Pro - 5G Android Phone - Unlocked Smartphone with Telephoto/Wide Angle Lens, and 24-Hour Battery - 128GB</item>
+        <item>Nothing Phone 1 Smartphone Unlocked 5G Android Phone Snapdragon 778G+</item>
+    </string-array>
+    <integer-array name="category_2_images">
+        <item>@drawable/mobilproduct11</item>
+        <item>@drawable/mobilproduct2</item>
+        <item>@drawable/mobilproduct3</item>
+        <item>@drawable/mobilproduct4</item>
+        <item>@drawable/mobilproduct5</item>
+    </integer-array>
+    <string-array name="category_2_prices">
+        <item>7000 KR</item>
+        <item>8500 KR</item>
+        <item>9000 KR</item>
+        <item>10000 KR</item>
+        <item>6000 KR</item>
+    </string-array>
+    <string-array name="category_2_sellers">
+        <item>Sellpy</item>
+        <item>Blocket</item>
+        <item>Tradera</item>
+        <item>Sellpy</item>
+        <item>Blocket</item>
+    </string-array>
+    <string-array name="category_2_descriptions">
+        <item>Capture the colours of the world in their truest form with the revolutionary Find X3 Pro. Rich tones and deep hues combine to illuminate the road to the future.</item>
+        <item>Whether you’re headed to a concert or romantic night out, there’s no such thing as bad lighting with Night Mode; Galaxy S23 Ultra lets you capture epic content.</item>
+        <item>The new Qualcomm Snapdragon 8 Gen 2 chipset is the most advanced chipset for Android devices, with increased CPU and GPU performance. Integrated AI processes improve background app usage.</item>
+        <item>Google Pixel 7 Pro is Google’s best-of-everything phone; powered by Google Tensor G2, it’s faster, more efficient, and more secure.</item>
+        <item>Behind the speed of Nothing Phone (1) is the Snapdragon 778G+ chipset. Cue phenomenal graphics. Enhanced gaming. Advanced camera functions. No charging head in the package.</item>
+    </string-array>
+
+    <string-array name="category_3_titles">
+        <!-- Kläder products -->
+        <item>Columbia Mens Glennaker Lake Rain Jacket</item>
+        <item>MakeMeChic Womens Summer Boho Dress Floral Print</item>
+        <item>Nike Mens Giannis Immortality White/Metallic Gold-Black</item>
+        <item>Nike Training Running Shoe, EU</item>
+        <item>THE NORTH FACE Half Dome Pullover Hoodie</item>
+    </string-array>
+    <integer-array name="category_3_images">
+        <item>@drawable/kladerproduct1</item>
+        <item>@drawable/kladerproduct2</item>
+        <item>@drawable/kladerproduct3</item>
+        <item>@drawable/kladerproduct4</item>
+        <item>@drawable/kladerproduct5</item>
+    </integer-array>
+    <string-array name="category_3_prices">
+        <item>1500 KR</item>
+        <item>2000 KR</item>
+        <item>3500 KR</item>
+        <item>5000 KR</item>
+        <item>4000 KR</item>
+    </string-array>
+    <string-array name="category_3_sellers">
+        <item>Tradera</item>
+        <item>Sellpy</item>
+        <item>Blocket</item>
+        <item>Tradera</item>
+        <item>Sellpy</item>
+    </string-array>
+    <string-array name="category_3_descriptions">
+        <item>WATERPROOF TECHNOLOGY: You’ll love our Columbia Mens Glennaker Lake Rain Jacket, it features our Hydroplus waterproof nylon fabric for the ultimate in lightweight, wet weather, protection and comfort.</item>
+        <item>Feature: floral print, spaghetti strap, tie strap, square neck, cottagecore, sleeveless, knot shoulder, shirred, ruffle, a line, summer boho dress, maxi dress, vacation beach outfits for women, beach sun dress.</item>
+        <item>Specially engineered Synthetic and mesh upper - delivers maximum breathability without looking meshy! Rubber TPU outsole - provides supreme traction where you need it.</item>
+        <item>The Nike revolution 5 is made from recycled emp knit providing an athletic look Built for revolutionary comfort and responsiveness.</item>
+        <item>Not too big yet not too tight, this standard fit t-shirt skims the body while offering freedom of movement through the shoulders, chest, and torso. Wear it tucked.</item>
+    </string-array>
+
     <string-array name="favorite_items">
         <item>item1</item>
         <item>item2</item>
@@ -29,16 +178,5 @@
         <item>@drawable/skonhetproduct5</item>
         <item>@drawable/product_image4</item>
     </array>
-
-    <!-- Product names -->
-    <string name="playstation_name">Playstation 5</string>
-    <string name="macbook_name">MacBook Pro</string>
-    <string name="rakapparat_name">Rakapparat</string>
-    <string name="sko_name">Löparskor</string>
-
-    <!-- Product descriptions -->
-    <string name="playstation_description">Playstation 5 är den senaste spelkonsolen från Sony, med fantastisk grafik och snabba laddningstider.</string>
-    <string name="macbook_description">MacBook Pro är en kraftfull bärbar dator från Apple, perfekt för kreativa yrkespersoner och studenter.</string>
-    <string name="rakapparat_description">Rakapparat med flera blad och flexibelt huvud för en nära och bekväm rakning.</string>
-    <string name="sko_description">Löparskor med god dämpning och stöd, passar för både nybörjare och erfarna löpare.</string>
 </resources>
+

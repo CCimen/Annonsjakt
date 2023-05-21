@@ -26,6 +26,11 @@ public class item_detailsActivity extends BaseActivity {
         title = findViewById(R.id.item_title);
         description = findViewById(R.id.item_description);
         image = findViewById(R.id.item_image);
+
+        // Fetch and display price and seller
+        TextView price = findViewById(R.id.item_price);
+        TextView seller = findViewById(R.id.item_seller);
+
         setUpBottomNavigation();
 
         Intent intent = getIntent();
@@ -35,6 +40,10 @@ public class item_detailsActivity extends BaseActivity {
             title.setText(product.getTitle());
             description.setText(product.getDescription());
             image.setImageResource(product.getImageResId());
+
+            // Set price and seller
+            price.setText(product.getPrice());
+            seller.setText(product.getSeller());
         }
     }
 

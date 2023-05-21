@@ -10,22 +10,17 @@ public class Product implements Serializable {
     private final int imageResId; // Resurs-ID för produktbild
     private final int categoryId; // Kategori-ID för produkten
     private final int itemIndex; // Index för produkten inom kategorin
+    private final String price; // Price of the product
+    private final String seller; // Seller of the product
 
-    /**
-     * Skapar en ny instans av Product.
-     *
-     * @param title       Produkttitel.
-     * @param description Produktbeskrivning.
-     * @param imageResId  Resurs-ID för produktbild.
-     * @param categoryId  Kategori-ID för produkten.
-     * @param itemIndex   Index för produkten inom kategorin.
-     */
-    public Product(String title, String description, int imageResId, int categoryId, int itemIndex) {
+    public Product(String title, String description, int imageResId, int categoryId, int itemIndex, String price, String seller) {
         this.title = title;
         this.description = description;
         this.imageResId = imageResId;
         this.categoryId = categoryId;
         this.itemIndex = itemIndex;
+        this.price = price;
+        this.seller = seller;
     }
 
     /**
@@ -71,5 +66,13 @@ public class Product implements Serializable {
      */
     public int getItemIndex() {
         return itemIndex;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public String getSeller() {
+        return seller;
     }
 }

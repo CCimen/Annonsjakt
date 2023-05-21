@@ -38,10 +38,10 @@ public class HemsidaActivity extends BaseActivity {
         Button filterButton = findViewById(R.id.filter_button);
 
         List<Product> recommendedProducts = new ArrayList<>();
-        recommendedProducts.add(ProductDatabase.getProduct(1, 0)); // Sony Playstation 5 Console
-        recommendedProducts.add(ProductDatabase.getProduct(1, 1)); // Apple 2022 MacBook Air Laptop with M2 chip
-        recommendedProducts.add(ProductDatabase.getProduct(2, 0)); // Philips Rakapparat
-        recommendedProducts.add(ProductDatabase.getProduct(4, 3)); // Adidas Skor
+//        recommendedProducts.add(ProductDatabase.getProduct(1, 0)); // Sony Playstation 5 Console
+//        recommendedProducts.add(ProductDatabase.getProduct(1, 1)); // Apple 2022 MacBook Air Laptop with M2 chip
+//        recommendedProducts.add(ProductDatabase.getProduct(2, 0)); // Philips Rakapparat
+//        recommendedProducts.add(ProductDatabase.getProduct(4, 3)); // Adidas Skor
 
         productImage1.setOnClickListener(v -> showProductDetails(recommendedProducts.get(0)));
         productImage2.setOnClickListener(v -> showProductDetails(recommendedProducts.get(1)));
@@ -52,25 +52,25 @@ public class HemsidaActivity extends BaseActivity {
 
         categoryImage1.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("selected_category", 1);
+            intent.putExtra("categoryId", 0); //change here
             startActivity(intent);
         });
 
         categoryImage2.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("selected_category", 2);
+            intent.putExtra("categoryId", 1); //change here
             startActivity(intent);
         });
 
         categoryImage3.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("selected_category", 3);
+            intent.putExtra("categoryId", 2); //change here
             startActivity(intent);
         });
 
         categoryImage4.setOnClickListener(v -> {
             Intent intent = new Intent(HemsidaActivity.this, CategoryActivity.class);
-            intent.putExtra("selected_category", 4);
+            intent.putExtra("categoryId", 3); //change here
             startActivity(intent);
         });
 

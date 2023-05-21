@@ -1,0 +1,182 @@
+<resources>-->
+<!--    <string name="app_name">AnnonsjaktenAPP</string>-->
+<!--    <string name="filter">Filter</string>-->
+<!--    <string name="categories">Kategorier</string>-->
+<!--    <string name="recommended_products">Rekommenderade produkter för dig</string>-->
+<!--    <string name="announcement">Du har räddat 4 träd genom att använda oss!</string>-->
+<!--    <string name="category_image_description">Category image</string>-->
+<!--    <string name="product_image_description">Product image</string>-->
+<!--    <string name="rekommenderade_produkter">Rekommenderade produkter för dig</string>-->
+<!--    <string name="saved_trees">Du har räddat 4 träd genom att använda oss!</string>-->
+<!--    <string name="kategorier">Kategorier</string>-->
+<!--    &lt;!&ndash; Product titles &ndash;&gt;-->
+<!--    <string-array name="product_titles">-->
+<!--        &lt;!&ndash; ... existing items ... &ndash;&gt;-->
+<!--        &lt;!&ndash; Dator products &ndash;&gt;-->
+<!--        <item>Sony Playstation 5 Console</item>-->
+<!--        <item>Apple 2022 MacBook Air Laptop with M2 chip: 13.6-inch Liquid Retina Display, 8GB RAM, 256GB SSD Storage</item>-->
+<!--        <item>Apple Magic Mouse: Wireless, Bluetooth, Rechargeable. Works with Mac or iPad</item>-->
+<!--        <item>Apple AirPods Pro (2nd Generation) Wireless Earbuds</item>-->
+<!--        <item>Apple Studio Display - Standard Glass - Tilt-Adjustable Stand</item>-->
+<!--        &lt;!&ndash; Skönhet products &ndash;&gt;-->
+<!--        <item>Philips Rakapparat</item>-->
+<!--        <item>Dior Homme Intense 100ml</item>-->
+<!--        <item>The Ordinary - Glycolic Acid 7% Toning Solution</item>-->
+<!--        <item>La Roche-Posay Anthelios Uvmune Ultra Light Creme SPF 50+</item>-->
+<!--        <item>Dolce Gabbana The One for Men Eau de Parfum Spray</item>-->
+<!--        &lt;!&ndash; Mobil products &ndash;&gt;-->
+<!--        <item>OPPO Find X3 PRO</item>-->
+<!--        <item>Samsung Galaxy S23 Ultra SM-S918B 5G Dual SIM 8GB RAM</item>-->
+<!--        <item>OnePlus 11 5G | 16GB RAM+256GB | Dual-SIM | Titan Black</item>-->
+<!--        <item>Google Pixel 7 Pro - 5G Android Phone - Unlocked Smartphone with Telephoto/Wide Angle Lens, and 24-Hour Battery - 128GB</item>-->
+<!--        <item>Nothing Phone 1 Smartphone Unlocked 5G Android Phone Snapdragon 778G+</item>-->
+<!--        &lt;!&ndash; Kläder products &ndash;&gt;-->
+<!--        <item>Columbia Mens Glennaker Lake Rain Jacket</item>-->
+<!--        <item>MakeMeChic Womens Summer Boho Dress Floral Print</item>-->
+<!--        <item>Nike Mens Giannis Immortality White/Metallic Gold-Black</item>-->
+<!--        <item>Nike Training Running Shoe, EU</item>-->
+<!--        <item>THE NORTH FACE Half Dome T-Shirt - Short-Sleeve - Men</item>-->
+<!--    </string-array>-->
+
+    <!-- Product descriptions -->
+<!--    <string-array name="product_descriptions">-->
+<!--        &lt;!&ndash; ... existing items ... &ndash;&gt;-->
+<!--        &lt;!&ndash; Dator products &ndash;&gt;-->
+<!--        <item>DualSense Wireless Controller integration: Feel your journey through the Norse realms, made possible by immersive haptic feedback and adaptive trigger functionality.</item>-->
+<!--        <item>The redesigned MacBook Air is more portable than ever and weighs just 2.7 pounds.</item>-->
+<!--        <item>Magic Mouse is wireless and rechargeable, with an optimized foot design that lets it glide smoothly across your desk.</item>-->
+<!--        <item>Personalized Spatial Audio surrounds you in sound tuned just for you. It works with dynamic head tracking to immerse you deeper in music and movies.</item>-->
+<!--        <item>An immersive 27-inch 5K Retina display with a 12MP camera with Center Stage, studio-quality mics, and six-speaker sound system.</item>-->
+<!--        &lt;!&ndash; Skönhet products &ndash;&gt;-->
+<!--        <item>Philips shaver series 9000 cuts up to 20% more hair in a single stroke.</item>-->
+<!--        <item>Dior Homme Intense 2011 by Dior is a Woody Floral Musk fragrance for men. Dior Homme Intense 2011 was launched in 2011.</item>-->
+<!--        <item>Glycolic Acid 7% Toning Solution is an exfoliant targeted at the surface of the skin. It helps improve skin clarity, balance uneven skin tone, and correct texture over time.</item>-->
+<!--        <item>La Roche-Posay Anthelios UVmune Ultra Light Cream SPF50+ är en ansiktssolkräm för alla hudtyper. Formulan innehåller thermalskt vatten från La-Roche Posay.</item>-->
+<!--        <item>The One for Men Eau de Parfum is part of the iconic world of The One, offering a deeper fragrance experience for the perfume connoisseur. Masculine and magnetic, this highly intense scent</item>-->
+<!--        &lt;!&ndash; Mobil products &ndash;&gt;-->
+<!--        <item>Capture the colours of the world in their truest form with the revolutionary Find X3 Pro. Rich tones and deep hues combine to illuminate the road to the future.</item>-->
+<!--        <item>Whether you’re headed to a concert or romantic night out, there’s no such thing as bad lighting with Night Mode; Galaxy S23 Ultra lets you capture epic content.</item>-->
+<!--        <item>The new Qualcomm Snapdragon 8 Gen 2 chipset is the most advanced chipset for Android devices, with increased CPU and GPU performance. Integrated AI processes improve background app usage</item>-->
+<!--        <item>Google Pixel 7 Pro is Google’s best-of-everything phone; powered by Google Tensor G2, it’s faster, more efficient, and more secure</item>-->
+<!--        <item>Behind the speed of Nothing Phone (1) is the Snapdragon 778G+ chipset. Cue phenomenal graphics. Enhanced gaming. Advanced camera functions. No charging head in the package.</item>-->
+<!--        &lt;!&ndash; Kläder products &ndash;&gt;-->
+<!--        <item>WATERPROOF TECHNOLOGY: You’ll love our Columbia Mens Glennaker Lake Rain Jacket, it features our Hydroplus waterproof nylon fabric for the ultimate in lightweight, wet weather, protection and comfort.</item>-->
+<!--        <item>Feature: floral print, spaghetti strap, tie strap, square neck, cottagecore, sleeveless, knot shoulder, shirred, ruffle, a line, summer boho dress, maxi dress, vacation beach outfits for women, beach sun dress</item>-->
+<!--        <item>Specially engineered Synthetic and mesh upper - delivers maximum breathability without looking meshy! Rubber TPU outsole - provides supreme traction where you need it</item>-->
+<!--        <item>The Nike revolution 5 is made from recycled emp knit providing an athletic look Built for revolutionary comfort and responsiveness.</item>-->
+<!--        <item>Not too big yet not too tight, this standard fit t-shirt skims the body while offering freedom of movement through the shoulders, chest and torso. Wear it tucked,</item>-->
+<!--    </string-array>-->
+
+<!--    &lt;!&ndash; Product categories &ndash;&gt;-->
+<!--    <string-array name="category_titles">-->
+<!--        <item>Dator</item>-->
+<!--        <item>Skönhet</item>-->
+<!--        <item>Mobil</item>-->
+<!--        <item>Kläder</item>-->
+<!--    </string-array>-->
+
+<!--    &lt;!&ndash; Product categories &ndash;&gt;-->
+<!--    <integer-array name="product_categories">-->
+<!--        &lt;!&ndash; Dator products &ndash;&gt;-->
+<!--        <item>0</item>-->
+<!--        <item>0</item>-->
+<!--        <item>0</item>-->
+<!--        <item>0</item>-->
+<!--        <item>0</item>-->
+<!--        &lt;!&ndash; Skönhet products &ndash;&gt;-->
+<!--        <item>1</item>-->
+<!--        <item>1</item>-->
+<!--        <item>1</item>-->
+<!--        <item>1</item>-->
+<!--        <item>1</item>-->
+<!--        &lt;!&ndash; Mobil products &ndash;&gt;-->
+<!--        <item>2</item>-->
+<!--        <item>2</item>-->
+<!--        <item>2</item>-->
+<!--        <item>2</item>-->
+<!--        <item>2</item>-->
+<!--        &lt;!&ndash; Kläder products &ndash;&gt;-->
+<!--        <item>3</item>-->
+<!--        <item>3</item>-->
+<!--        <item>3</item>-->
+<!--        <item>3</item>-->
+<!--        <item>3</item>-->
+<!--    </integer-array>-->
+
+<!--    &lt;!&ndash; Product sellers &ndash;&gt;-->
+<!--    <string-array name="product_sellers">-->
+<!--        &lt;!&ndash; Dator products &ndash;&gt;-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Tradera</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        &lt;!&ndash; Skönhet products &ndash;&gt;-->
+<!--        <item>Sellpy</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Tradera</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        &lt;!&ndash; Mobil products &ndash;&gt;-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Tradera</item>-->
+<!--        <item>Tradera</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        <item>Tradera</item>-->
+<!--        &lt;!&ndash; Kläder products &ndash;&gt;-->
+<!--        <item>Blocket</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        <item>Sellpy</item>-->
+<!--        <item>Tradera</item>-->
+<!--        <item>Sellpy</item>-->
+<!--    </string-array>-->
+
+<!--    &lt;!&ndash; Product prices &ndash;&gt;-->
+<!--    <integer-array name="product_prices">-->
+<!--        &lt;!&ndash; Dator products &ndash;&gt;-->
+<!--        <item>5000</item>-->
+<!--        <item>9000</item>-->
+<!--        <item>7000</item>-->
+<!--        <item>6000</item>-->
+<!--        <item>4500</item>-->
+<!--        &lt;!&ndash; Skönhet products &ndash;&gt;-->
+<!--        <item>1850</item>-->
+<!--        <item>1500</item>-->
+<!--        <item>2000</item>-->
+<!--        <item>3200</item>-->
+<!--        <item>1950</item>-->
+<!--        &lt;!&ndash; Mobil products &ndash;&gt;-->
+<!--        <item>8000</item>-->
+<!--        <item>9000</item>-->
+<!--        <item>10000</item>-->
+<!--        <item>15000</item>-->
+<!--        <item>7500</item>-->
+<!--        &lt;!&ndash; Kläder products &ndash;&gt;-->
+<!--        <item>2700</item>-->
+<!--        <item>3000</item>-->
+<!--        <item>1500</item>-->
+<!--        <item>2500</item>-->
+<!--        <item>3500</item>-->
+<!--    </integer-array>-->
+
+<!--    <string-array name="favorite_items">-->
+<!--        <item>item1</item>-->
+<!--        <item>item2</item>-->
+<!--        <item>item3</item>-->
+<!--        <item>item4</item>-->
+<!--        <item>item5</item>-->
+<!--    </string-array>-->
+<!--    <string-array name="favorite_items_description">-->
+<!--        <item>Item 1 description</item>-->
+<!--        <item>Item 2 description</item>-->
+<!--        <item>Item 3 description</item>-->
+<!--        <item>Item 4 description</item>-->
+<!--        <item>Item 5 description</item>-->
+<!--    </string-array>-->
+<!--    <array name="favorite_item_images">-->
+<!--        <item>@drawable/datorproduct1</item>-->
+<!--        <item>@drawable/datorproduct2</item>-->
+<!--        <item>@drawable/skonhetproduct5</item>-->
+<!--        <item>@drawable/product_image4</item>-->
+<!--    </array>-->
+</resources>
