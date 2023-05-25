@@ -17,6 +17,20 @@ public class ProductDataFetchUtil {
      * @return a list of products in the category
      */
     public List<Product> fetchProductData(Context context, int categoryId) {
+        return fetchProductData(context, categoryId, true, true, true);
+    }
+
+    /**
+     * Fetches data for products in a specific category, filtered by seller.
+     *
+     * @param context   the context
+     * @param categoryId the category ID
+     * @param blocket   include Blocket products in the result
+     * @param tradera   include Tradera products in the result
+     * @param sellpy      include eBay products in the result
+     * @return a list of filtered products in the category
+     */
+    public List<Product> fetchProductData(Context context, int categoryId, boolean blocket, boolean tradera, boolean sellpy) {
         List<Product> products = new ArrayList<>();
 
         Resources res = context.getResources();
@@ -29,15 +43,15 @@ public class ProductDataFetchUtil {
         String[] productSellers = res.getStringArray(res.getIdentifier(categoryPrefix + "_sellers", "array", context.getPackageName()));
 
         for (int i = 0; i < productTitles.length; i++) {
-            Product product = new Product(productTitles[i], productDescriptions[i], productImages.getResourceId(i, -1), categoryId, i, productPrices[i], productSellers[i]);
-            products.add(product);
+            // Check the seller and add to the list only if it matches the filter
+            if ((productSellers[i].equals("Blocket") && blocket) || (productSellers[i].equals("Tradera") && tradera) || (productSellers[i].equals("Sellpy") && sellpy)) {
+                Product product = new Product(productTitles[i], productDescriptions[i], productImages.getResourceId(i, -1), categoryId, i, productPrices[i], productSellers[i], false);
+                products.add(product);
+            }
         }
 
         productImages.recycle(); // Do not forget to recycle the TypedArray once you are done with it
 
         return products;
     }
-
-
-
 }

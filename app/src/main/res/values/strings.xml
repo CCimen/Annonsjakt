@@ -157,26 +157,5 @@
         <item>The Nike revolution 5 is made from recycled emp knit providing an athletic look Built for revolutionary comfort and responsiveness.</item>
         <item>Not too big yet not too tight, this standard fit t-shirt skims the body while offering freedom of movement through the shoulders, chest, and torso. Wear it tucked.</item>
     </string-array>
-
-    <string-array name="favorite_items">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-    </string-array>
-    <string-array name="favorite_items_description">
-        <item>Item 1 description</item>
-        <item>Item 2 description</item>
-        <item>Item 3 description</item>
-        <item>Item 4 description</item>
-        <item>Item 5 description</item>
-    </string-array>
-    <array name="favorite_item_images">
-        <item>@drawable/datorproduct1</item>
-        <item>@drawable/datorproduct2</item>
-        <item>@drawable/skonhetproduct5</item>
-        <item>@drawable/product_image4</item>
-    </array>
 </resources>
 

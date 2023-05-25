@@ -15,15 +15,10 @@ import java.util.List;
  */
 public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapter.ViewHolder> {
 
-    private final List<FavoriteItem> favoriteItems; // En lista med favoritobjekt att visa i RecyclerView
+    private final List<Product> favoriteProducts; // Modify this
 
-    /**
-     * Skapar en instans av FavoriteItemAdapter.
-     *
-     * @param favoriteItems En lista med favoritobjekt att visa.
-     */
-    public FavoriteItemAdapter(List<FavoriteItem> favoriteItems) {
-        this.favoriteItems = favoriteItems;
+    public FavoriteItemAdapter(List<Product> favoriteProducts) { // Modify this
+        this.favoriteProducts = favoriteProducts; // Modify this
     }
 
     /**
@@ -47,10 +42,10 @@ public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapte
      */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        FavoriteItem item = favoriteItems.get(position);
-        holder.titleView.setText(item.getTitle());
-        holder.descriptionView.setText(item.getDescription());
-        holder.imageView.setImageResource(item.getImageResId());
+        Product product = favoriteProducts.get(position); // Modify this
+        holder.titleView.setText(product.getTitle()); // Modify this
+        holder.descriptionView.setText(product.getDescription()); // Modify this
+        holder.imageView.setImageResource(product.getImageResId()); // Modify this
     }
 
     /**
@@ -60,7 +55,7 @@ public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapte
      */
     @Override
     public int getItemCount() {
-        return favoriteItems.size();
+        return favoriteProducts.size(); // Modify this
     }
 
     /**

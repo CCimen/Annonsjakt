@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,48 +17,42 @@ import android.widget.EditText;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * En aktivitet som visar sökresultat baserat på en sökfråga.
- */
 public class SearchResultsActivity extends BaseActivity {
 
-    private EditText searchBar; // Sökfältet för att mata in sökfrågan
-    private RecyclerView searchResultsRecyclerView; // RecyclerView för att visa sökresultaten
-    private ProductAdapter productAdapter; // Adapter för att binda sökresultaten till RecyclerView
-    private List<Product> productList; // Lista över sökresultat
-
-    /* Implementera detta i framtiden*/
+    private EditText searchBar;
+    private RecyclerView searchResultsRecyclerView;
+    private ProductAdapter productAdapter;
+    private List<Product> productList;
     private boolean blocketFilter;
     private boolean traderaFilter;
-    private boolean ebayFilter;
+    private boolean sellpyFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-        // Sätt upp tillbaka knappen
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         searchBar = findViewById(R.id.search_bar);
         searchResultsRecyclerView = findViewById(R.id.search_results_recycler_view);
 
-        // Initializera produkt listan
         productList = new ArrayList<>();
         setUpBottomNavigation();
-        // Sätt upp RecyclerView
         productAdapter = new ProductAdapter(this, productList);
         searchResultsRecyclerView.setAdapter(productAdapter);
         searchResultsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Hämta sökfrågan från Intent
         Intent intent = getIntent();
         String searchQuery = intent.getStringExtra("search_query");
 
-        // Ange sökfältets text till sökfrågan och sök i produkternas titlar
+        SharedPreferences sharedPref = getSharedPreferences("filter_preferences", Context.MODE_PRIVATE);
+        blocketFilter = sharedPref.getBoolean("Blocket", true);
+        traderaFilter = sharedPref.getBoolean("Tradera", true);
+        sellpyFilter = sharedPref.getBoolean("Sellpy", true);
+
         searchBar.setText(searchQuery);
         searchProducts(searchQuery);
 
-        // Sätt upp sökfältet för att söka produkter
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -68,12 +64,10 @@ public class SearchResultsActivity extends BaseActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                // Search the products whenever the text changes
                 searchProducts(s.toString());
             }
         });
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -86,27 +80,34 @@ public class SearchResultsActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Söker produkter baserat på en sökfråga.
-     *
-     * @param query Sökfrågan som används för att filtrera produkterna.
-     */
     private void searchProducts(String query) {
         List<Product> matchedProducts = new ArrayList<>();
 
         ProductDataFetchUtil dataFetchUtil = new ProductDataFetchUtil();
 
+        SharedPreferences sharedPref = getSharedPreferences("filter_preferences", Context.MODE_PRIVATE);
+        boolean blocket = sharedPref.getBoolean("Blocket", false);
+        boolean tradera = sharedPref.getBoolean("Tradera", false);
+        boolean sellpy = sharedPref.getBoolean("Sellpy", false);
+        boolean anyFilterSelected = blocket || tradera || sellpy;
+
         // Fetch products from all categories
         for (int categoryId = 0; ; categoryId++) {
             try {
-                List<Product> categoryProducts = dataFetchUtil.fetchProductData(this, categoryId);
+                List<Product> categoryProducts;
+                if (anyFilterSelected) {
+                    categoryProducts = dataFetchUtil.fetchProductData(this, categoryId, blocket, tradera, sellpy);
+                } else {
+                    categoryProducts = dataFetchUtil.fetchProductData(this, categoryId);
+                }
+
                 for (Product product : categoryProducts) {
                     if (product.getTitle().toLowerCase().contains(query.toLowerCase())) {
                         matchedProducts.add(product);
                     }
                 }
             } catch (Resources.NotFoundException e) {
-                // Category not found, exit the loop
+
                 break;
             }
         }
@@ -116,7 +117,5 @@ public class SearchResultsActivity extends BaseActivity {
         productList.addAll(matchedProducts);
         productAdapter.notifyDataSetChanged();
     }
-
-
 
 }

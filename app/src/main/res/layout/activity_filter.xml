@@ -28,7 +28,7 @@
         android:text="Tradera" />
 
     <CheckBox
-        android:id="@+id/ebay_checkbox"
+        android:id="@+id/sellpy_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="eBay" />

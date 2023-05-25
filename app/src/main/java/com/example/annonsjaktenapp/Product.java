@@ -13,7 +13,9 @@ public class Product implements Serializable {
     private final String price; // Price of the product
     private final String seller; // Seller of the product
 
-    public Product(String title, String description, int imageResId, int categoryId, int itemIndex, String price, String seller) {
+    private boolean isFavorite; // Anger om produkten är favorit eller inte
+
+    public Product(String title, String description, int imageResId, int categoryId, int itemIndex, String price, String seller, boolean isFavorite) {
         this.title = title;
         this.description = description;
         this.imageResId = imageResId;
@@ -21,6 +23,7 @@ public class Product implements Serializable {
         this.itemIndex = itemIndex;
         this.price = price;
         this.seller = seller;
+        this.isFavorite = isFavorite;
     }
 
     /**
@@ -74,5 +77,13 @@ public class Product implements Serializable {
 
     public String getSeller() {
         return seller;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
     }
 }

@@ -45,12 +45,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.description.setText(product.getDescription());
         holder.image.setImageResource(product.getImageResId());
 
+        holder.favoriteIcon.setImageResource(product.isFavorite() ?
+                android.R.drawable.btn_star_big_on :
+                android.R.drawable.btn_star_big_off);
+
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), item_detailsActivity.class);
             intent.putExtra("product", product);
             v.getContext().startActivity(intent);
         });
-
+        holder.favoriteIcon.setOnClickListener(v -> {
+            product.setFavorite(!product.isFavorite());
+            notifyItemChanged(position);
+            FavoritesHolder.getInstance().addFavorite(product);
+        });
 
 
     }
@@ -69,11 +77,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         final TextView description; // Textvy för produktbeskrivning
         final ImageView image; // Bildvy för produktbild
 
+        final ImageView favoriteIcon; // Add this for the favorite (heart) icon
+
         public ProductViewHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.product_title);
             description = itemView.findViewById(R.id.product_description);
             image = itemView.findViewById(R.id.product_image);
+            favoriteIcon = itemView.findViewById(R.id.favorite_icon);
+
         }
     }
 }

@@ -6,10 +6,9 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
@@ -23,6 +22,7 @@
             android:id="@+id/product_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/product_image"
             android:text="Product Title"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -31,8 +31,18 @@
             android:id="@+id/product_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/product_title"
             android:text="Product Description" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:padding="8dp"
+            android:src="@android:drawable/btn_star_big_off" />
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
