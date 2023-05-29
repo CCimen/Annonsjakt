@@ -24,7 +24,7 @@ public class activity_favorite extends BaseActivity {
 
         RecyclerView itemContainer = findViewById(R.id.favorite_item_container);
         itemContainer.setLayoutManager(new LinearLayoutManager(this));
-        itemContainer.setAdapter(new ProductAdapter(this, favoritedItems));
+        itemContainer.setAdapter(new FavoriteItemAdapter(favoritedItems));
 
         setUpBottomNavigation();
     }

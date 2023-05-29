@@ -34,5 +34,11 @@
             android:layout_marginTop="8dp"
             android:textSize="16sp"
             android:textColor="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/unfavorite_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_delete" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

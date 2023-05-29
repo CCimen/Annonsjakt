@@ -50,7 +50,7 @@ public class ProductDataFetchUtil {
             }
         }
 
-        productImages.recycle(); // Do not forget to recycle the TypedArray once you are done with it
+        productImages.recycle();
 
         return products;
     }

@@ -61,9 +61,9 @@ public class CategoryActivity extends AppCompatActivity {
 
     private void updateFavoriteButtonImage(Product product, ImageButton favoriteButton) {
         if (FavoritesHolder.getInstance().isFavorite(product)) {
-            favoriteButton.setImageResource(R.drawable.btn_star_big_on);  // Replace with your image resource for selected favorite
+            favoriteButton.setImageResource(R.drawable.btn_star_big_on);
         } else {
-            favoriteButton.setImageResource(R.drawable.btn_star_big_off);  // Replace with your image resource for unselected favorite
+            favoriteButton.setImageResource(R.drawable.btn_star_big_off);
         }
     }
 

@@ -15,10 +15,10 @@ import java.util.List;
  */
 public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapter.ViewHolder> {
 
-    private final List<Product> favoriteProducts; // Modify this
+    private final List<Product> favoriteProducts; // Lista över favoritobjekt
 
-    public FavoriteItemAdapter(List<Product> favoriteProducts) { // Modify this
-        this.favoriteProducts = favoriteProducts; // Modify this
+    public FavoriteItemAdapter(List<Product> favoriteProducts) {
+        this.favoriteProducts = favoriteProducts;
     }
 
     /**
@@ -42,11 +42,30 @@ public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapte
      */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Product product = favoriteProducts.get(position); // Modify this
-        holder.titleView.setText(product.getTitle()); // Modify this
-        holder.descriptionView.setText(product.getDescription()); // Modify this
-        holder.imageView.setImageResource(product.getImageResId()); // Modify this
+        Product product = favoriteProducts.get(position);
+        holder.titleView.setText(product.getTitle());
+        holder.descriptionView.setText(product.getDescription());
+        holder.imageView.setImageResource(product.getImageResId());
+
+        holder.unfavoriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int currentPosition = holder.getAdapterPosition();
+                if (currentPosition == RecyclerView.NO_POSITION) {
+                    return;
+                }
+
+                Product currentProduct = favoriteProducts.get(currentPosition);
+                currentProduct.setFavorite(false);
+                FavoritesHolder.getInstance().removeFavorite(currentProduct);
+                favoriteProducts.remove(currentPosition);
+                notifyItemRemoved(currentPosition);
+                notifyItemRangeChanged(currentPosition, favoriteProducts.size());
+            }
+        });
     }
+
+
 
     /**
      * Returnerar antalet favoritobjekt i listan.
@@ -66,11 +85,14 @@ public class FavoriteItemAdapter extends RecyclerView.Adapter<FavoriteItemAdapte
         TextView descriptionView;
         ImageView imageView;
 
+        ImageView unfavoriteButton;
+
         public ViewHolder(View itemView) {
             super(itemView);
             titleView = itemView.findViewById(R.id.favorite_item_title);
             descriptionView = itemView.findViewById(R.id.favorite_item_description);
             imageView = itemView.findViewById(R.id.favorite_item_image);
+            unfavoriteButton = itemView.findViewById(R.id.unfavorite_button);
         }
     }
 }
